@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+:root{
+  --aside-width: 200px;
+  --headfoo-width: 75px;
+}
+
 /* GENERAL */ 
 
 *{
@@ -12,6 +18,13 @@ body{
   font-family: 'Montserrat', sans-serif; 
 }
 
+header, 
+footer{
+  height: var(--headfoo-width);
+  width: 100%;
+  position: fixed;
+}
+
 /* utilities */
 
 .debug{
@@ -19,10 +32,54 @@ body{
   border: 1px solid firebrick;
 }
 
-/* HEADER */
+.container{
+}
 
-/* ASIDE */
+
+
+/* HEADER */
+header{
+  background-color: aqua;
+  top: 0;
+  z-index: 0;
+}
 
 /* MAIN */
+main{
+  padding: var(--headfoo-width) 0;
+  display: flex;
+}
+
+/* ASIDE */
+aside{
+  width: var(--aside-width);
+  height: calc(100vh - var(--headfoo-width));
+  background-color: yellow;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.content{
+  width: calc(100vw - var(--aside-width));
+  height: calc(100vh - ((var(--headfoo-width)* 2)));
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+}
 
 /* FOOTER */
+footer{
+  background-color: green;
+  bottom: 0;
+}
+
+/* ####################### 
+    --- MEDIA QUERY ---
+   ####################### */
+
+@media screen and (max-width: 475px) {
+  :root{
+    --aside-width: 40px;
+  }
+}
