@@ -118,6 +118,11 @@ aside .logo{
   padding-bottom: 30px;
 }
 
+aside .logo img:last-child{
+  width: 30px;
+  display: none;
+}
+
 aside .functions{
   padding-bottom: 25px;
 }
@@ -148,9 +153,20 @@ aside .playlist i{
   color: black;
 }
 
+/* da rivedere */
+aside .aside-bottom::before{
+  content: '';
+  display: block;
+  background-color: var(--color-aside);
+  width: calc( var(--aside-width) - 40px );
+  height: 20px;
+}
+
 aside .aside-bottom{
-  position: fixed;
-  bottom: 95px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color-aside);
+  padding-bottom: 20px;
 }
 
 aside .install{
@@ -209,6 +225,7 @@ aside .avatar img{
 
 /* FOOTER */
 footer{
+  z-index: 3;
   bottom: 0;
   background-color: var(--color-footer);
 }
@@ -248,4 +265,34 @@ footer{
   :root{
     --aside-width: 40px;
   }
+
+  aside{
+    padding: 10px 10px 0;
+  }
+
+  aside a,
+  .playlist h3,
+  .playlist i{
+    display: none;
+  }
+
+  aside .logo img:last-child{
+    display: block;
+  }
+
+  aside .logo img:first-child{
+    display: none;
+  }
+
+  .aside-bottom .install{
+    text-align: center;
+  }
+
 }
+
+@media screen and (max-height: 420px) {
+  .aside-bottom{
+    display:none;
+  }
+}
+
