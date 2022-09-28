@@ -3,15 +3,17 @@
 
 :root{
   /* dim*/
-  --aside-width: 200px;
+  --aside-width: 225px;
   --headfoo-width: 75px;
-  
+  --row-max-height: 280px;
+  --col-max-width: 180px;
+  --min-gap: 15px;
+
   /* palette */
   --color-header: #080B12;
   --color-aside: #000000;
   --color-backcontent: #141922;
   --color-footer: #282828;
-
 }
 
 /* GENERAL */ 
@@ -50,8 +52,6 @@ a{
 }
 
 .btn:hover{
-
-
 }
 
 /* utilities */
@@ -105,22 +105,72 @@ aside{
   overflow-y: auto;
   position: fixed;
   right: 0;
+  padding: 15px 45px 15px 15px;
   background-color: var(--color-backcontent);
 }
 
+/* ROW */
+.row{
+  width: 100%;
+  height: var(--row-max-height);
+  display: flex;
+}
 
+.row .col{
+  width: calc((100% - (var(--min-gap) * 6)) / 6);
+  height: 100%;
+  margin-right: 15px;
+}
+
+.row .col .card{
+  width: calc(100% - 15px);
+  max-width: 250px;
+  height: 100%;
+}
+
+.row .col .card .card-img{
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: blueviolet;
+} */
 
 /* FOOTER */
 footer{
-  background-color: var(--color-footer);
   bottom: 0;
+  background-color: var(--color-footer);
 }
 
 /* ####################### 
     --- MEDIA QUERY ---
    ####################### */
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 1337px) {
+  .row{
+    flex-wrap: wrap;
+  }
+
+  .row .col{
+    width: calc((100% - (var(--min-gap) * 4)) / 4);
+  }
+}
+
+
+@media screen and (max-width: 878px) {
+  .row{
+    flex-wrap: wrap;
+  }
+
+  .row .col{
+    width: calc((100% - (var(--min-gap) * 2)) / 2);
+  }
+}
+
+
+@media screen and (max-width: 639px) {
+}
+
+
+@media screen and (max-width: 552px) {
   :root{
     --aside-width: 40px;
   }
