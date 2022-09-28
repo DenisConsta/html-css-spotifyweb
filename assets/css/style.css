@@ -2,8 +2,16 @@
 
 
 :root{
+  /* dim*/
   --aside-width: 200px;
   --headfoo-width: 75px;
+  
+  /* palette */
+  --color-header: #080B12;
+  --color-aside: #000000;
+  --color-backcontent: #141922;
+  --color-footer: #282828;
+
 }
 
 /* GENERAL */ 
@@ -25,6 +33,27 @@ footer{
   position: fixed;
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.btn{
+  background-color: var(--color-header);
+  padding: 15px 40px;
+  border: 1px solid white;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.btn:hover{
+
+
+}
+
 /* utilities */
 
 .debug{
@@ -35,13 +64,22 @@ footer{
 .container{
 }
 
-
+.flex-centend{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
 /* HEADER */
 header{
-  background-color: aqua;
+  background-color: var(--color-header);
   top: 0;
   z-index: 0;
+  padding: 20px 10px;
+}
+
+header .btn{
+  float: right;
 }
 
 /* MAIN */
@@ -54,23 +92,27 @@ main{
 aside{
   width: var(--aside-width);
   height: calc(100vh - var(--headfoo-width));
-  background-color: yellow;
+  background-color: var(--color-aside);
   position: fixed;
   top: 0;
   z-index: 1;
 }
 
+/* CONTENT */
 .content{
   width: calc(100vw - var(--aside-width));
   height: calc(100vh - ((var(--headfoo-width)* 2)));
   overflow-y: auto;
   position: fixed;
   right: 0;
+  background-color: var(--color-backcontent);
 }
+
+
 
 /* FOOTER */
 footer{
-  background-color: green;
+  background-color: var(--color-footer);
   bottom: 0;
 }
 
