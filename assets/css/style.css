@@ -4,7 +4,7 @@
 :root{
   /* dim*/
   --aside-width: 225px;
-  --headfoo-width: 75px;
+  --headfoo-height: 75px;
   --row-max-height: 320px;
   --col-max-width: 180px;
   --min-gap: 15px;
@@ -31,7 +31,7 @@ body{
 
 header, 
 footer{
-  height: var(--headfoo-width);
+  height: var(--headfoo-height);
   width: 100%;
   position: fixed;
 }
@@ -75,10 +75,11 @@ a{
 
 /* HEADER */
 header{
-  background-color: var(--color-header);
+  
   top: 0;
-  z-index: 1;
+  z-index: 2;
   padding: 20px 10px;
+  background-color: rgba(0, 0, 0, 0.5)
 }
 
 header .btn{
@@ -87,14 +88,14 @@ header .btn{
 
 /* MAIN */
 main{
-  padding: var(--headfoo-width) 0;
+  padding: var(--headfoo-height) 0;
   display: flex;
 }
 
 /* ASIDE */
 aside{
   width: var(--aside-width);
-  height: calc(100vh - var(--headfoo-width));
+  height: calc(100vh - var(--headfoo-height));
   background-color: var(--color-aside);
   position: fixed;
   top: 0;
@@ -108,19 +109,17 @@ aside a{
   font-weight: 600;
 }
 
-
 aside h3{
   padding-bottom: 15px;
   font-size: 1.1rem;
 }
 
-aside .logo{
-  padding-bottom: 30px;
-}
-
-aside .logo img:last-child{
-  width: 30px;
-  display: none;
+aside nav ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  gap: 10px;
 }
 
 aside .functions{
@@ -134,12 +133,37 @@ aside .functions img,
   vertical-align: middle;
 }
 
-aside nav ul{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  list-style: none;
-  gap: 10px;
+/* aside .functions li:first-child:before{
+  content: '';
+  display: block;
+  height: 30px;
+  width: 5px;
+  position: absolute;
+  left: 0;
+  background-color: #ADFF2F;
+} */
+
+.active::before{
+  content: '';
+  display: block;
+  height: 30px;
+  width: 5px;
+  position: absolute;
+  left: 0;
+  background-color: #ADFF2F
+}
+
+.active a{
+  color: white;
+}
+
+aside .logo{
+  padding-bottom: 30px;
+}
+
+aside .logo img:last-child{
+  width: 30px;
+  display: none;
 }
 
 aside .playlist ul{
@@ -154,19 +178,31 @@ aside .playlist i{
 }
 
 /* da rivedere */
-aside .aside-bottom::before{
+/* aside .aside-bottom::before{
   content: '';
   display: block;
   background-color: var(--color-aside);
   width: calc( var(--aside-width) - 40px );
   height: 20px;
+} */
+
+aside .aside-top .playlist{
+  overflow-y: scroll;
+  
+}
+
+.aside-top{
+  margin-bottom: calc((100vh - var(--headfoo-height)) - 650px);
 }
 
 aside .aside-bottom{
-  position: absolute;
-  bottom: 0;
+  
   background-color: var(--color-aside);
   padding-bottom: 20px;
+}
+
+aside .aside-bottom > div > *{
+  margin-right: 10px;
 }
 
 aside .install{
@@ -191,25 +227,28 @@ aside .avatar img{
 /* CONTENT */
 .content{
   width: calc(100vw - var(--aside-width));
-  height: calc(100vh - ((var(--headfoo-width)* 2)));
+  height: calc(100vh - ((var(--headfoo-height))));
   overflow-y: auto;
   position: fixed;
+  top: 0;
   right: 0;
-  padding: 15px 45px 15px 15px;
+  padding: calc(var(--min-gap) + var(--headfoo-height) ) 45px 15px 15px;
   background-color: var(--color-backcontent);
+  z-index: 1;
 }
 
 /* ROW */
 .row{
   width: 100%;
-  height: var(--row-max-height);
-  display: flex;
+/*   height: var(--row-max-height);
+ */  display: flex;
 }
 
 .row .col{
   width: calc((100% - (var(--min-gap) * 6)) / 6);
   height: 100%;
-  margin-right: 15px;
+  margin-right: var(--min-gap);
+  margin-bottom: var(--min-gap);
 }
 
 .row .col .card{
@@ -222,6 +261,32 @@ aside .avatar img{
   max-width: 280px;
   background-color: blueviolet;
 } 
+
+.row .col .card .card-img img{
+  width: 100%;
+}
+
+.row .col .card .card-text{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
+/*   padding-top: var(--min-gap);
+ */  color: white;
+  padding: 15px 10px;
+  overflow-wrap: break-word;
+}
+
+.row .col .card .card-text h3{
+  font-size: 1rem;
+}
+
+.row .col .card .card-text h4{
+  font-size: .8rem;
+  color:var(--color-aside-text);
+}
+
 
 /* FOOTER */
 footer{
@@ -266,14 +331,23 @@ footer{
     --aside-width: 40px;
   }
 
-  aside{
-    padding: 10px 10px 0;
+  main aside{
+    padding: 10px 5px 0;
+
+  }
+
+  aside .aside-top{
+    margin-bottom: calc((100vh - var(--headfoo-height)) - 390px);
   }
 
   aside a,
   .playlist h3,
   .playlist i{
     display: none;
+  }
+
+  aside .logo{
+    padding-bottom: 10px;
   }
 
   aside .logo img:last-child{
@@ -285,7 +359,15 @@ footer{
   }
 
   .aside-bottom .install{
-    text-align: center;
+    padding: 5px;
+  }
+
+  .functions .active::before{
+    display: none;
+  }
+
+  .active a{
+    color: var(--color-aside-text);
   }
 
 }
@@ -294,5 +376,7 @@ footer{
   .aside-bottom{
     display:none;
   }
+
+  
 }
 
