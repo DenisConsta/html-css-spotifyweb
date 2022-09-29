@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
 :root{
   /* dim*/
   --aside-width: 225px;
@@ -19,7 +18,6 @@
 }
 
 /* GENERAL */ 
-
 *{
   margin: 0;
   padding: 0;
@@ -32,8 +30,7 @@ body{
 
 header, 
 footer{
-/*   height: var(--headfoo-height);
- */  width: 100%;
+  width: 100%;
   position: fixed;
 }
 
@@ -77,6 +74,7 @@ a{
 }
 
 /* HEADER */
+
 header{
   height: var(--headfoo-height);
   top: 0;
@@ -90,9 +88,7 @@ header .btn{
 }
 
 /* MAIN */
-main{
-/*   padding: var(--headfoo-height) 0;
- */  
+main{ 
   padding: var(--foo-height) 0;
   display: flex;
 }
@@ -133,6 +129,36 @@ aside nav ul{
   gap: 10px;
 }
 
+.active a{
+  color: white;
+}
+
+aside img,
+aside i{
+  cursor: pointer;
+}
+
+/* ASIDE TOP */
+
+.aside-top{
+  /*   margin-bottom: calc((100vh - var(--foo-height)) - 650px);
+   */
+    margin-bottom: calc(((100vh - var(--foo-height) - 100%)) - 450px);
+  }
+
+/* LOGO*/
+
+aside .logo{
+  padding-bottom: 30px;
+}
+
+aside .logo img:last-child{
+  width: 30px;
+  display: none;
+}
+
+/* FUNCTIONS */
+
 aside .functions{
   padding-bottom: 25px;
 }
@@ -144,16 +170,6 @@ aside .functions img,
   vertical-align: middle;
 }
 
-/* aside .functions li:first-child:before{
-  content: '';
-  display: block;
-  height: 30px;
-  width: 5px;
-  position: absolute;
-  left: 0;
-  background-color: #ADFF2F;
-} */
-
 .active::before{
   content: '';
   display: block;
@@ -162,24 +178,6 @@ aside .functions img,
   position: absolute;
   left: 0;
   background-color: #ADFF2F
-}
-
-.active a{
-  color: white;
-}
-
-aside img,
-aside i{
-  cursor: pointer;
-}
-
-aside .logo{
-  padding-bottom: 30px;
-}
-
-aside .logo img:last-child{
-  width: 30px;
-  display: none;
 }
 
 aside .playlist ul{
@@ -193,25 +191,8 @@ aside .playlist i{
   color: black;
 }
 
-/* da rivedere */
-/* aside .aside-bottom::before{
-  content: '';
-  display: block;
-  background-color: var(--color-aside);
-  width: calc( var(--aside-width) - 40px );
-  height: 20px;
-} */
-
 aside .aside-top .playlist{
   overflow: auto;
-  
-  
-}
-
-.aside-top{
-/*   margin-bottom: calc((100vh - var(--foo-height)) - 650px);
- */
-  margin-bottom: calc(((100vh - var(--foo-height) - 100%)) - 450px);
 }
 
 aside .aside-bottom{
@@ -241,8 +222,8 @@ aside .avatar img{
   border-radius: 50%;
 }
 
+/* MAIN CONTENT */
 
-/* CONTENT */
 .content{
   width: calc(100vw - var(--aside-width));
   height: calc(100vh - ((var(--foo-height))));
@@ -270,7 +251,6 @@ aside .avatar img{
   color: var(--color-aside-text);
 }
 
-
 .active-2::after{
   content: '';
   display: block;
@@ -294,13 +274,10 @@ aside .avatar img{
   font-size: .8rem;
 }
 
-
-
 /* ROW */
 .row{
   width: 100%;
-/*   height: var(--row-max-height);
- */  display: flex;
+  display: flex;
 }
 
 .row .col{
@@ -309,6 +286,8 @@ aside .avatar img{
   margin-right: var(--min-gap);
   margin-bottom: var(--min-gap);
 }
+
+/* CARD */
 
 .row .col .card{
   height: 100%;
@@ -341,8 +320,7 @@ aside .avatar img{
   width: 100%;
   max-width: 280px;
   position: relative;
-/*   background-color: blueviolet;
- */} 
+} 
 
 .row .col .card .card-img img{
   width: 100%;
@@ -358,8 +336,7 @@ aside .avatar img{
   text-align: center;
   flex-direction: column;
   gap: 10px;
-/*   padding-top: var(--min-gap);
- */  color: white;
+  color: white;
   padding: 10px;
   overflow-wrap: break-word;
 }
@@ -372,7 +349,6 @@ aside .avatar img{
   font-size: .8rem;
   color:var(--color-aside-text);
 }
-
 
 /* FOOTER */
 footer{
@@ -391,8 +367,7 @@ footer a{
 }
 
 footer>*{
-/*   width: 300px;
- */  height: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -400,16 +375,17 @@ footer>*{
 footer>div:first-child,
 footer>div:last-child{
   padding: 10px 10px;
-  
 }
 
 footer>div:last-child{
-  width: 20vw;
+  width: 250px;
 }
 
 footer img{
   height: 100%;
 }
+
+/* FOOTER LEFT */
 
 footer .left-footer>*{
   display: flex;
@@ -442,6 +418,7 @@ footer .left-footer .text h5{
 }
 
 /* FOOTER CENTER */
+
 .center-footer{
   width: 40vw;
   flex-direction: column;
@@ -455,8 +432,7 @@ footer .left-footer .text h5{
 }
 
 .center-footer .player-buttons{
-/*   height: 60%;
- */  display: flex;
+  display: flex;
   justify-content: center;
   padding: 5px 0;
 }
@@ -488,22 +464,22 @@ footer .left-footer .text h5{
   color: white;
   font-weight: 600;
 }
-/* .center-footer .player-bar progress{
- *//*   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 
-  height: 20px;
-  border-radius: 30px; */
+/* FOOTER RIGHT */
 
+.right-footer{
+  align-items: center;
+}
 
-  /* width: 80%;
-  margin: 0 10px;
-  accent-color: white; */
+.right-footer .icons{
+  display: flex;
+  gap: 10px;
+  color: white;
+}
 
 .progress{
   width: 80%;
-  height: 6px;
+  height: 5px;
   border-radius: 30px;
   background-color: var(--color-aside-text);
   margin: 0 10px;
@@ -516,18 +492,6 @@ footer .left-footer .text h5{
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
-
-.right-footer{
-  align-items: center;
-}
-
-.right-footer .icons{
-  display: flex;
-  gap: 10px;
-  color: white;
-}
-
-
 
 /* ####################### 
     --- MEDIA QUERY ---
@@ -542,8 +506,6 @@ footer .left-footer .text h5{
     width: calc((100% - (var(--min-gap) * 4)) / 4);
   }
 }
-
-
 
 @media screen and (max-width: 878px) {
   .row{
@@ -560,7 +522,6 @@ footer .left-footer .text h5{
   }
 }
 
-
 @media screen and (max-width: 639px) {
   footer .left-footer .text{
     padding-right: 20px;
@@ -571,13 +532,7 @@ footer .left-footer .text h5{
     justify-content: center;
     gap: 5px;
   }
-
- /*  footer .right-footer .progress{
-    flex-shrink: 0;
-  } */
-
 }
-
 
 @media screen and (max-width: 552px) {
   :root{
@@ -586,7 +541,6 @@ footer .left-footer .text h5{
 
   main aside{
     padding: 10px 5px 0;
-
   }
 
   aside .aside-top{
@@ -630,28 +584,20 @@ footer .left-footer .text h5{
   footer>div:first-child,
   footer>div:last-child{
   padding: 20px 10px;
-/*   width: 25%;
- */  }
+  }
 
- footer>div:last-child .icons{
+  footer>div:last-child .icons{
   font-size: 10px;
-}
+  }
 
-footer>div:last-child{
-  width: 40vw;
-}
-
-  footer .center-footer{
-/*     width: 50%;
- */  }
-
+  footer>div:last-child{
+    width: 40vw;
+  }
 }
 
 @media screen and (max-height: 420px) {
   .aside-bottom{
     display:none;
   }
-
-  
 }
 
