@@ -51,9 +51,11 @@ a{
   font-size: .75rem;
   font-weight: 600;
   flex-shrink: 0;
+  transition: .3s;
 }
 
 .btn:hover{
+  transform: scale(1.1)
 }
 
 /* utilities */
@@ -79,7 +81,7 @@ header{
   height: var(--headfoo-height);
   top: 0;
   z-index: 2;
-  padding: 20px 10px;
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0.5)
 }
 
@@ -111,6 +113,11 @@ aside a{
   color: var(--color-aside-text);
   font-weight: 600;
   font-size: .9rem;
+}
+
+aside a:hover,
+.content>nav ul li a:hover{
+  color: white;
 }
 
 aside h3{
@@ -161,6 +168,11 @@ aside .functions img,
   color: white;
 }
 
+aside img,
+aside i{
+  cursor: pointer;
+}
+
 aside .logo{
   padding-bottom: 30px;
 }
@@ -191,16 +203,18 @@ aside .playlist i{
 } */
 
 aside .aside-top .playlist{
-  overflow-y: auto;
+  overflow: auto;
+  
   
 }
 
 .aside-top{
-  margin-bottom: calc((100vh - var(--foo-height)) - 650px);
+/*   margin-bottom: calc((100vh - var(--foo-height)) - 650px);
+ */
+  margin-bottom: calc(((100vh - var(--foo-height) - 100%)) - 450px);
 }
 
 aside .aside-bottom{
-  
   background-color: var(--color-aside);
   padding-bottom: 20px;
 }
@@ -256,6 +270,7 @@ aside .avatar img{
   color: var(--color-aside-text);
 }
 
+
 .active-2::after{
   content: '';
   display: block;
@@ -297,12 +312,35 @@ aside .avatar img{
 
 .row .col .card{
   height: 100%;
+  cursor:pointer;
+}
+
+.row .col .card:hover .card-img img{
+  filter: opacity(.5);
+}
+
+.row .col .card:hover .card-img:before{
+  display: block;
+}
+
+.card-img:before{
+  display: none;
+  content: "\f144";
+  font-family: "Font Awesome 6 Free";
+  font-size: 60px;
+  position: absolute;
+  z-index: 5;
+  color: white;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
 }
 
 .row .col .card .card-img{
   aspect-ratio: 1/1;
   width: 100%;
   max-width: 280px;
+  position: relative;
 /*   background-color: blueviolet;
  */} 
 
@@ -347,6 +385,11 @@ footer{
   justify-content: space-between;
 }
 
+footer i,
+footer a{
+  cursor: pointer;
+}
+
 footer>*{
 /*   width: 300px;
  */  height: 100%;
@@ -382,6 +425,10 @@ footer .left-footer .icons{
   gap:10px;
   color: var(--color-aside-text);
   align-items: center;
+}
+
+footer .left-footer i:hover{
+  color: white;
 }
 
 footer .left-footer .text h4{
