@@ -58,6 +58,25 @@
   padding-bottom: 30px;
 }
 
+/* scroller default for FIREFOX */
+.scroller{
+  scrollbar-color: var(--color-green) var(--color-text-grey);
+  scrollbar-width: thin;
+}
+
+/* scroller for CHROME*/
+.scroller::-webkit-scrollbar {
+  width: 10px;
+  background: var(--color-text-grey);
+  -webkit-border-radius: 30px;
+  scrollbar-gutter: stable;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background: var(--color-green);
+  -webkit-border-radius: 30px;
+}
+
 /* GENERAL */ 
 *{
   margin: 0;
@@ -241,7 +260,9 @@ aside .aside-bottom>div>*:first-child{
   color: white;
 }
 
-.install:hover > i{
+.install:hover > i,
+.center-footer i:hover,
+.avatar:hover> a{
   color: var(--color-green);
 }
 
