@@ -13,63 +13,74 @@
 <body>
 
   <!-- HEADER -->
-  <header class="flex-centend">
-    <a href="#" class="btn">Effettua l'upgrade</a>
+  <header>
+    <div class="container">
+      <a href="#" class="btn">Effettua l'upgrade</a>
+    </div>
   </header>
 
-  <main>
-    <!-- ASIDE -->
-    <aside>
-      <!-- TOP ASIDE -->
+  <!-- ASIDE -->
+  <aside>
+
+    <div class="container flex-col">
+      <!-- ASIDE TOP -->
       <div class="aside-top ">
-        <div class="logo">
+
+        <!-- LOGO -->
+        <div class="logo p-30">
           <img src="assets/img/logo.svg" alt="">
           <img src="assets/img/logo-small.svg" alt="">
         </div>
 
         <!-- FUNCTIONS -->
-        <nav class="functions">
-          <ul>
-            <li class="active">
+        <nav class="functions p-30">
+          <ul class="flex-col ">
+            <li class="p-15 active">
               <img src="assets/img/home.svg" alt="home">
               <a class="" href="#">Home</a>
             </li>
-            <li>
+            <li class="p-15">
               <img src="assets/img/search.svg" alt="home">
               <a href="#">Cerca</a>
             </li>
-            <li>
+            <li class="p15">
               <img src="assets/img/libreria.svg" alt="home">
               <a href="#">La tua libreria</a>
             </li>
           </ul>
         </nav>
 
-        <!-- PLAYLIST -->
-        <nav class="playlist ">
-          <h3>PLAYLIST</h3>
-          <ul>
-            <li>
-              <i class="fa-solid fa-plus"></i>
-              <a href="#">Crea Playlist</a>
-            </li>
-            <li><a href="#">Nome Playlist</a></li>
-            <li><a href="#">Nome Playlist</a></li>
-            <li><a href="#">Nome Playlist</a></li>
-            <li><a href="#">Nome Playlist</a></li>
-            <li><a href="#">Nome Playlist</a></li>
-            <li><a href="#">Nome Playlist</a></li>
-            <li><a href="#">Nome Playlist</a></li>
-          </ul>
-        </nav>
+        <!-- NEW PLAYLIST -->
+        <div class="create-playlist">
+          <h3 class="p-15">PLAYLIST</h3>
+          <div class="new p-15">
+            <i class="fa-solid fa-plus"></i>
+            <a href="#">Crea Playlist</a>
+          </div>
+        </div>
 
       </div>
 
-      <!-- BOTTOM ASIDE -->
-      <div class="aside-bottom ">
+      <!-- PLAYLIST -->
+      <div class="aside-playlist flex-col">
+        <nav>
+          <ul>
+            <li class="p-15"><a href="#">Nome Playlist</a></li>
+            <li class="p-15"><a href="#">Nome Playlist</a></li>
+            <li class="p-15"><a href="#">Nome Playlist</a></li>
+            <li class="p-15"><a href="#">Nome Playlist</a></li>
+            <li class="p-15"><a href="#">Nome Playlist</a></li>
+            <li class="p-15"><a href="#">Nome Playlist</a></li>
+            <li class="p-15"><a href="#">Nome Playlist</a></li>
+            <li class="p-15"><a href="#">Nome Playlist</a></li>
+          </ul>
+        </nav>
+      </div>
 
+      <!-- ASIDE BOTTOM -->
+      <div class="aside-bottom flex-col">
         <!-- INSTALL -->
-        <div class="install ">
+          <div class="install ">
           <i class="fa-regular fa-circle-down "></i>
           <a href="#">Installa App</a>
         </div>
@@ -79,228 +90,235 @@
           <img src="assets/img/profile.svg" alt="">
           <a href="#">John Doe</a>
         </div>
+      </div>
+    </div>
+    
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+    <!-- NAV MENU -->
+    <nav class="p-30">
+      <ul>
+        <li class="active-2"><a href="#">In evidenza</a></li>
+        <li><a href="#">Podcast</a></li>
+        <li><a href="#">classifiche</a></li>
+        <li><a href="#">generi e mood</a></li>
+        <li><a href="#">nuove uscite</a></li>
+        <li><a href="#">scopri</a></li>
+      </ul>
+    </nav>
+
+    <!--RECENTLY PLAYED SECTION -->
+    <section class="p-20">
+      <div class="sec-title p-20">
+        <h2 class="">Recently Played</h2>
+      </div>
+      <!-- ROW -->
+      <div class="row  ">
+        <!-- COL -->
+        <div class="col  ">
+          <!-- CARD -->
+          <div class="card  ">
+            <!-- CARD IMG -->
+            <div class="card-img  ">
+              <img src="assets/img/metal_lifting.jpg" alt="Metal">
+            </div>
+            <!-- CARD TEXT -->
+            <div class="card-text  ">
+              <h3 class="p-10">Heavy Metal</h3>
+              <h4>Subtitle</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col  ">
+          <div class="card  ">
+            <div class="card-img  ">
+              <img src="assets/img/stranger.jpeg" alt="Stranger">
+            </div>
+            <div class="card-text  ">
+              <h3 class="p-10">Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</h3>
+              <h4>Kyle Dixon & Micheal Stein</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col  ">
+          <div class="card  ">
+            <div class="card-img  ">
+              <img src="assets/img/aquietplace.jpeg" alt="quiet">
+            </div>
+            <div class="card-text  ">
+              <h3 class="p-10">A quiet place</h3>
+              <h4>Subtitle</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col  ">
+          <div class="card  ">
+            <div class="card-img  ">
+              <img src="assets/img/split.jpeg" alt="Split">
+            </div>
+            <div class="card-text  ">
+              <h3 class="p-10">Split</h3>
+              <h4>Subtitle</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col  ">
+          <div class="card  ">
+            <div class="card-img  ">
+              <img src="assets/img/cure.jpeg" alt="cure">
+            </div>
+            <div class="card-text  ">
+              <h3 class="p-10">A cure for wellness</h3>
+              <h4>Subtitle</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col  ">
+          <div class="card  ">
+            <div class="card-img  ">
+              <img src="assets/img/sinister.jpeg" alt="Sinister">
+            </div>
+            <div class="card-text  ">
+              <h3 class="p-10">Sinister</h3>
+              <h4>Subtitle</h4>
+            </div>
+          </div>
+        </div>
 
       </div>
-    </aside>
+    </section>
 
-    <!-- MAIN CONTENT -->
-    <div class="content">
+    <!-- SECTION -->
+    <section class="p-20">
+      <div class="sec-title p-20">
+        <h2 class="p-10">Creato per John Doe</h2>
+        <h3>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti.</h3>
+      </div>
+      <div class="row  ">
+        <div class="col  ">
+          <div class="card  ">
+            <div class="card-img  ">
+              <img src="assets/img/radar.jpeg" alt="Metal">
+            </div>
+            <div class="card-text  ">
+              <h3>Release Radar</h3>
+            </div>
+          </div>
+        </div>
 
-      <!-- NAV MENU -->
-      <nav class="">
-        <ul>
-          <li class="active-2"><a href="#">In evidenza</a></li>
-          <li><a href="#">Podcast</a></li>
-          <li><a href="#">classifiche</a></li>
-          <li><a href="#">generi e mood</a></li>
-          <li><a href="#">nuove uscite</a></li>
-          <li><a href="#">scopri</a></li>
-        </ul>
-      </nav>
+        <div class="col ">
+          <div class="card ">
+            <div class="card-img ">
+              <img src="assets/img/mixdaily.jpeg" alt="Stranger">
+            </div>
+            <div class="card-text ">
+              <h3>Daily Mix 1</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <!--RECENTLY PLAYED SECTION -->
-      <section>
-        <div class="sec-title">
-          <h2>Recently Played</h2>
+    <!-- ARTIST SECTION -->
+    <section class="p-20">
+      <div class="sec-title p-20">
+        <h2 class="p-10">Artisti pi&ugrave; popolari</h2>
+        <h3>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti.</h3>
+      </div>
+      <div class="row ">
+        <div class="col ">
+          <div class="card ">
+            <div class="card-img circle ">
+              <img src="assets/img/youg.jpeg" alt="Metal">
+            </div>
+            <div class="card-text  ">
+              <h3>Lana Del Ray</h3>
+            </div>
+          </div>
         </div>
-        <!-- ROW -->
-        <div class="row  ">
-          <!-- COL -->
-          <div class="col  ">
-            <!-- CARD -->
-            <div class="card  ">
-              <!-- CARD IMG -->
-              <div class="card-img  ">
-                <img src="assets/img/metal_lifting.jpg" alt="Metal">
-              </div>
-              <!-- CARD TEXT -->
-              <div class="card-text  ">
-                <h3>Heavy Metal</h3>
-                <h4>Subtitle</h4>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col  ">
-            <div class="card  ">
-              <div class="card-img  ">
-                <img src="assets/img/stranger.jpeg" alt="Stranger">
-              </div>
-              <div class="card-text  ">
-                <h3>Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</h3>
-                <h4>Kyle Dixon & Micheal Stein</h4>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col  ">
-            <div class="card  ">
-              <div class="card-img  ">
-                <img src="assets/img/aquietplace.jpeg" alt="quiet">
-              </div>
-              <div class="card-text  ">
-                <h3>A quiet place</h3>
-                <h4>Subtitle</h4>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col  ">
-            <div class="card  ">
-              <div class="card-img  ">
-                <img src="assets/img/split.jpeg" alt="Split">
-              </div>
-              <div class="card-text  ">
-                <h3>Split</h3>
-                <h4>Subtitle</h4>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col  ">
-            <div class="card  ">
-              <div class="card-img  ">
-                <img src="assets/img/cure.jpeg" alt="cure">
-              </div>
-              <div class="card-text  ">
-                <h3>A cure for wellness</h3>
-                <h4>Subtitle</h4>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col  ">
-            <div class="card  ">
-              <div class="card-img  ">
-                <img src="assets/img/sinister.jpeg" alt="Sinister">
-              </div>
-              <div class="card-text  ">
-                <h3>Sinister</h3>
-                <h4>Subtitle</h4>
-              </div>
-            </div>
-          </div>
-  
-        </div>
-      </section>
 
-      <!-- SECTION -->
-      <section>
-        <div class="sec-title">
-          <h2>Creato per John Doe</h2>
-          <h3>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti.</h3>
-        </div>
-        <div class="row  ">
-          <div class="col  ">
-            <div class="card  ">
-              <div class="card-img  ">
-                <img src="assets/img/radar.jpeg" alt="Metal">
-              </div>
-              <div class="card-text  ">
-                <h3>Release Radar</h3>
-              </div>
+        <div class="col ">
+          <div class="card ">
+            <div class="card-img circle ">
+              <img src="assets/img/einaudi.jpeg" alt="Stranger">
             </div>
-          </div>
-  
-          <div class="col ">
-            <div class="card ">
-              <div class="card-img ">
-                <img src="assets/img/mixdaily.jpeg" alt="Stranger">
-              </div>
-              <div class="card-text ">
-                <h3>Daily Mix 1</h3>
-              </div>
+            <div class="card-text ">
+              <h3>Ludovico Einaudi</h3>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ARTIST SECTION -->
-      <section>
-        <div class="sec-title">
-          <h2>Artisti pi&ugrave; popolari</h2>
-          <h3>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti.</h3>
-        </div>
-        <div class="row ">
-          <div class="col ">
-            <div class="card ">
-              <div class="card-img circle ">
-                <img src="assets/img/youg.jpeg" alt="Metal">
-              </div>
-              <div class="card-text  ">
-                <h3>Lana Del Ray</h3>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col ">
-            <div class="card ">
-              <div class="card-img circle ">
-                <img src="assets/img/einaudi.jpeg" alt="Stranger">
-              </div>
-              <div class="card-text ">
-                <h3>Ludovico Einaudi</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
 
   </main>
-
+  
   <!-- FOOTER -->
-  <footer class="">
-    <!-- LEFT FOOTER -->
-    <div class="left-footer ">
-      <img src="assets/img/sinister.jpeg" alt="sinsiter">
-      <div class="text ">
-        <h4 class="">Sinister</h4>
-        <h5 class="">Brano Nome</h5>
-      </div>
-      <div class="icons ">
-        <i class="fa-regular fa-heart "></i>
-        <i class="fa-regular fa-folder "></i>
-      </div>
-    </div>
+  <footer>
+    <div class="container flex-bet">
 
-    <!-- CENTER FOOTER -->
-    <div class="center-footer ">
-      <div class="player-buttons ">
-        <div class="inside-buttons ">
-          <i class="fa-solid fa-shuffle"></i>
-          <i class="fa-solid fa-backward-step"></i>
-          <i class="fa-regular fa-circle-play"></i>
-          <i class="fa-solid fa-forward-step"></i>
-          <i class="fa-solid fa-rotate-right"></i>
+      <!-- LEFT FOOTER -->
+      <div class="left-footer ">
+        <img src="assets/img/sinister.jpeg" alt="sinsiter">
+        <!-- TEXT -->
+        <div class="text ">
+          <h4 class="">Sinister</h4>
+          <h5 class="">Brano Nome</h5>
+        </div>
+        <!-- ICONS -->
+        <div class="icons ">
+          <i class="fa-regular fa-heart "></i>
+          <i class="fa-regular fa-folder "></i>
         </div>
       </div>
+      
+      <!-- CENTER FOOTER -->
+      <div class="center-footer flex-col">
+        <!-- PLAYER BUTTONS -->
+        <div class="player-buttons flex-cen p-10">
+          <div class="inside-buttons flex-cen ">
+            <i class="fa-solid fa-shuffle"></i>
+            <i class="fa-solid fa-backward-step"></i>
+            <i class="fa-regular fa-circle-play"></i>
+            <i class="fa-solid fa-forward-step"></i>
+            <i class="fa-solid fa-rotate-right"></i>
+          </div>
+        </div>
+  
+        <!-- PLAYER BAR -->
+        <div class="player-bar  flex-bet ">
+          <span class="start ">0:25</span>  
+          <div class="progress ">
+            <div class="progress-bar">
+            </div>
+          </div>    
+          <span class="end">4:35</span>
+        </div>
+      </div>
+      
+      <!-- RIGHT FOOTER -->
+      <div class="right-footer">
 
-      <!-- PLAYER BAR -->
-      <div class="player-bar  ">
-        <span class="start ">0:25</span>  
+        <!-- ICONS -->
+        <div class="icons ">
+          <i class="fa-solid fa-list-ul"></i>
+          <i class="fa-solid fa-desktop"></i>
+          <i class="fa-solid fa-volume-high"></i>
+        </div>
+  
+        <!-- VOLUME BAR -->
         <div class="progress ">
           <div class="progress-bar">
           </div>
-        </div>    
-        <span class="end">4:35</span>
+        </div> 
       </div>
-    </div>
-
-    <!-- RIGHT FOOTER -->
-    <div class="right-footer ">
-      
-      <div class="icons ">
-        <i class="fa-solid fa-list-ul"></i>
-        <i class="fa-solid fa-desktop"></i>
-        <i class="fa-solid fa-volume-high"></i>
-      </div>
-
-      <!-- VOLUME BAR -->
-      <div class="progress">
-        <div class="progress-bar">
-        </div>
-      </div> 
 
     </div>
   </footer>
