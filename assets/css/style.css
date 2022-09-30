@@ -13,6 +13,7 @@
   --color-aside-back: #000000;
   --color-main-back: #141922;
   --color-footer-back: #282828;
+  --color-green: #ADFF2F;
 }
 
 /* utilities */
@@ -89,7 +90,7 @@ a{
   color: var(--color-text-grey);
 }
 
-a:hover{
+main nav a:hover{
   color: white;
 }
 
@@ -104,7 +105,7 @@ i{
   width: 5px;
   position: absolute;
   left: 0;
-  background-color: #ADFF2F
+  background-color: var(--color-green);
 }
 
 /* HEADER */
@@ -140,7 +141,9 @@ header .container{
 }
 
 .btn:hover{
-  transform: scale(1.1)
+  transform: scale(1.1);
+  border-color: var(--color-green);
+  color: var(--color-green);
 }
 
 /* ASIDE */
@@ -153,7 +156,7 @@ aside{
 
 aside a,
 main nav a{
-  font-size: .9rem;
+  font-size: .8rem;
   font-weight: 600;
 }
 
@@ -164,6 +167,10 @@ aside .aside-bottom{
 }
 
 /* LOGO */
+.logo img{
+  cursor: pointer;
+}
+
 .aside-top .logo img:last-child{
   display: none;
   width: 100%;
@@ -177,6 +184,26 @@ aside .aside-bottom{
   cursor: pointer;
 }
 
+.functions li{
+  cursor: pointer;
+}
+
+nav.functions li:hover > a,
+.new:hover > a,
+.aside-playlist li:hover > a,
+.install:hover > a{
+  color: white;
+}
+
+nav.functions li:hover > img,
+.logo:hover > img{
+  filter: brightness(0) saturate(100%) invert(73%) sepia(76%) saturate(436%) hue-rotate(36deg) brightness(112%) contrast(109%);
+}
+
+.active a{
+  color: white;
+}
+
 /* CREATE PLAYLIST */
 .create-playlist .new i{
   background-color: var(--color-text-grey);
@@ -185,11 +212,21 @@ aside .aside-bottom{
   font-size: 1.4rem;
 }
 
+.create-playlist .new:hover > i{
+  background-color:var(--color-green);
+}
 
 /* ASIDE PLAYLIST */
 aside .aside-playlist{
   margin-bottom: auto;
   overflow-y: auto;
+}
+
+.aside-playlist li,
+.new,
+.install,
+.avatar{
+  cursor: pointer;
 }
 
 /* ASIDE BOTTOM */
@@ -202,6 +239,10 @@ aside .aside-bottom>div>*:first-child{
   border-bottom: 1px solid var(--color-text-grey);
   padding-bottom: 5px;
   color: white;
+}
+
+.install:hover > i{
+  color: var(--color-green);
 }
 
 /* AVATAR */
@@ -252,7 +293,7 @@ main nav ul li a{
   display: block;
   width: 30px;
   height: 2px;
-  background-color: #ADFF2F;
+  background-color: var(--color-green);
   margin: 2px auto;
 }
 
@@ -379,6 +420,11 @@ footer .center-footer{
 .left-footer .text h5{
   font-size: .7rem;
   color: var(--color-text-grey);
+  cursor: pointer;
+}
+
+.left-footer .text h5:hover{
+  text-decoration: underline;
 }
 
 .left-footer .icons{
@@ -419,14 +465,31 @@ footer .center-footer{
   border-radius: 30px;
   background-color: var(--color-text-grey);
   margin: 0 10px;
+  cursor: pointer;
+}
+
+.progress:hover .progress-bar{
+  background-color: var(--color-green);
+}
+
+.progress:hover .progress-bar::before{
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  top: 50%; 
+  left: 100%; 
+  transform: translate(-50%, -50%);
 }
 
 .progress .progress-bar{
   width: 25%;
   height: 100%;
   background-color: white;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-radius: 30px;
 }
 
 /* FOOTER RIGHT */
